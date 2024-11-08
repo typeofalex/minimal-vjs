@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  signaling:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    environment:
+      - PORT=4444
+    command: ["node", "./bin/server.js"]
+    ports:
+      - "4444:4444"
+    volumes:
+      - ./node_modules:/usr/src/app/node_modules
+    networks:
+      - yjs-network
+
+networks:
+  yjs-network:
+    driver: bridge

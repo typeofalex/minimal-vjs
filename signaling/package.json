@@ -1,0 +1,13 @@
+{
+  "name": "signaling",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "bin/server.js",
+  "dependencies": {
+    "lib0": "^0.2.94",
+    "ws": "^8.18.0"
+  },
+  "scripts": {
+    "start": "node ./bin/server.js"
+  }
+}
